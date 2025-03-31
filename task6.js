@@ -28,7 +28,7 @@ export class Player {
   }
   removeParty(player){
     for (let i = 0; i < this.partyMembers.length; i++){
-      if (this.partyMembers[i] == player){
+      if (this.partyMembers[i] == player.name){
         console.log(`Player ${player.name} has been kicked from ${this.name}'s party.`);
         this.partyMembers.splice(i, 1);
       }
@@ -49,4 +49,5 @@ player2.expGain(120);
 player3.expGain(100);
 console.log(player1.partyMembers);
 player1.removeParty(player2);
+player1.removeParty(player3);
 console.log(player1.partyMembers);
